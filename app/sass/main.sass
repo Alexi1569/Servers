@@ -1,3 +1,12 @@
+$reg: 'Montserrat reg'
+$med: 'Montserrat med'
+$light: 'Montserrat light'
+$extrab: 'Montserrat extrab'
+$bold: 'Montserrat bold'
+$semi: 'Montserrat semi'
+
+$orange: #f58220
+
 *
 	margin: 0
 	padding: 0
@@ -16,7 +25,7 @@ body
 	font-size: 16px
 	position: relative
 	min-height: 100vh
-	font-family: Arial, sans-serif
+	font-family: $reg, Arial, sans-serif
 
 html
 	font-size: 16px
@@ -61,3 +70,51 @@ textarea:-moz-placeholder
 
 input[type="submit"]
 	cursor: pointer
+
+.container
+	width: 100%
+	max-width: 1170px
+	padding-left: 15px
+	padding-right: 15px
+	margin: 0 auto
+
+.logo svg
+	fill: #fff
+
+.header
+	background-color: #171717
+	&__logo
+		svg
+			width: 6.25rem
+	&__top
+		padding: 1.75rem 0
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		justify-content: space-between
+	&__search
+		&-icon
+			fill: #dddddd
+			width: 0.8125rem
+	&__nav
+		margin-right: 2.5rem
+		&-list
+			display: -webkit-flex
+			display: -moz-flex
+			display: -ms-flex
+			display: -o-flex
+			display: flex
+			align-items: stretch
+			justify-content: flex-start
+			li
+				margin-right: 1.87500rem
+				&:last-of-type
+					margin-right: 0
+			a
+				display: block
+				color: #dcdcdc
+				font-size: 0.75em
+				font-family: $med
