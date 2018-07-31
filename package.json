@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/Alexi1569/Template#readme",
   "dependencies": {
+    "backstopjs": "^3.5.2",
     "gulp-shorthand": "^1.1.0",
     "npm": "^6.0.0"
   },
