@@ -7,10 +7,6 @@ $semi: 'Montserrat semi'
 
 $orange: #f58220
 
-.icon-bell
-	font-size: 72px
-	color: #fff
-
 *
 	margin: 0
 	padding: 0
@@ -18,6 +14,11 @@ $orange: #f58220
 
 a
 	text-decoration: none
+
+#mobile-menu
+	opacity: 0
+	height: 0
+	overflow: hidden
 
 input:focus, textarea:focus, button:focus, a:focus
 	outline: 0
@@ -31,6 +32,19 @@ body
 	min-height: 100vh
 	font-family: $reg, Arial, sans-serif
 	background-color: #1e2025
+
+.news-item
+	&__content
+		overflow: hidden
+	.news__item-info
+		position: initial
+		text-align: left
+	img
+		width: 48.6842105%
+		height: auto
+		float: left
+		margin-right: 3.12500rem
+		margin-bottom: 2rem
 
 .jquery-modal.blocker.current
 	.modal
@@ -58,6 +72,10 @@ body
 			display: block
 		&.callback-modal
 			max-width: 495px
+			.form-group
+				width: 48.7356322%
+				&.form-group--shorter
+					width: 48.0952381%
 			.modal-content
 				display: -webkit-flex
 				display: -moz-flex
@@ -73,80 +91,95 @@ body
 				padding: 0 2.1875rem
 				margin: 2rem auto 0
 				letter-spacing: 0
-			.form-group
-				width: 48.7356322%
-				height: 2.1875rem
-				margin-bottom: 1.25rem
-				.SumoSelect>.CaptionCont>label>i
-					background: url(../img/arrow-down.svg) no-repeat center
-					background-size: cover
-					opacity: 1
-					width: 10px
-					height: 5px
-					cursor: pointer
-				.SumoSelect .select-all>label, .SumoSelect>.CaptionCont, .SumoSelect>.optWrapper>.options li.opt label
-					font-size: 10px
-				.SumoSelect>.CaptionCont>span.placeholder
-					font-style: normal
-					color: #b1b1b1
-				.SumoSelect.open>.CaptionCont, .SumoSelect:focus>.CaptionCont, .SumoSelect:hover>.CaptionCont
-					box-shadow: none
-				.SumoSelect
-					width: 100%
-					text-align: left
-					height: 100%
-					& > .CaptionCont
-						border-radius: 3px
-						border-color: #dddddd
-						height: 100%
-						&.SelectBox
-							line-height: 2.1875rem
-							padding: 0
-						& > span
-							color: #333
-							padding-left: 1.12500rem
-							font-family: $reg
-							font-size: 11px
-				input:not([type="submit"])
-					border: 1px solid #dddddd
-					border-radius: 3px
-					display: block
-					width: 100%
-					height: 100%
-					background-color: transparent
-					padding: 0 1.12500rem
-				&.form-group--hover
-					position: relative
-					&.active-no-label
-						& > label
-							opacity: 0
-					&.active
-						& > input:not([type="submit"])
-							border-color: #4e4a5b
-						& > label
-							opacity: 1
-							font-size: 0.625em
-							color: #333
-							transform: translateY(0%)
-							font-family: $med
-							top: -0.3125rem
-							z-index: 1
-					& > label
-						transition: 0.3s all ease-in
-						position: absolute
-						left: 1.0625rem
-						font-family: $reg
-						z-index: -1	
-						font-size: 0.6875em
-						top: 50%
-						transform: translateY(-50%)
-						display: inline-block
-						color: #b1b1b1
-						padding: 0 0.4375rem
-						background-color: #fff
-				&.form-group--shorter
-					width: 48.0952381%
+			
 
+.shares-page
+	&__content
+		margin-bottom: -1.87500rem
+	.share__slide
+		width: 31.5789474%
+		margin-right: 2.6315789%
+		margin-bottom: 1.87500rem
+		&:nth-child(3n)
+			margin-right: 0
+
+.callback-modal
+	.form-group
+		height: 2.1875rem
+		margin-bottom: 1.25rem
+		.SumoSelect>.CaptionCont>label>i
+			background: url(../img/arrow-down.svg) no-repeat center
+			background-size: cover
+			opacity: 1
+			width: 10px
+			height: 5px
+			cursor: pointer
+		.SumoSelect .select-all>label, .SumoSelect>.CaptionCont, .SumoSelect>.optWrapper>.options li.opt label
+			font-size: 10px
+		.SumoSelect>.CaptionCont>span.placeholder
+			font-style: normal
+			color: #b1b1b1
+		.SumoSelect.open>.CaptionCont, .SumoSelect:focus>.CaptionCont, .SumoSelect:hover>.CaptionCont
+			box-shadow: none
+		.SumoSelect
+			width: 100%
+			text-align: left
+			height: 100%
+			& > .CaptionCont
+				border-radius: 3px
+				border-color: #dddddd
+				height: 100%
+				&.SelectBox
+					line-height: 2.1875rem
+					padding: 0
+				& > span
+					color: #333
+					padding-left: 1.12500rem
+					font-family: $reg
+					font-size: 11px
+		input:not([type="submit"]),
+		textarea
+			border: 1px solid #dddddd
+			border-radius: 3px
+			display: block
+			width: 100%
+			height: 100%
+			background-color: transparent
+			padding: 0 1.12500rem
+			transition: 0.3s all ease-in
+		textarea
+			padding-top: 0.55rem
+			padding-bottom: 0.55rem
+		&.form-group--hover
+			position: relative
+			&.active-no-label
+				& > label
+					opacity: 0
+			&.active
+				& > input:not([type="submit"]),
+				& > textarea
+					border-color: #4e4a5b
+				& > label
+					opacity: 1
+					font-size: 0.625em
+					color: #333
+					transform: translateY(0%)
+					font-family: $med
+					top: -0.3125rem
+					z-index: 1
+			& > label
+				transition: 0.3s all ease-in
+				position: absolute
+				left: 1.0625rem
+				font-family: $reg
+				z-index: -1	
+				font-size: 0.6875em
+				top: 50%
+				transform: translateY(-50%)
+				display: inline-block
+				color: #b1b1b1
+				padding: 0 0.4375rem
+				background-color: #fff
 
 html
 	font-size: 16px
@@ -324,6 +357,7 @@ input[type="submit"]
 	cursor: pointer
 	background-color: $orange
 	line-height: 1.87500rem
+	border: 0
 	transition: 0.3s all ease-in
 	font-size: 0.6875em
 	&:hover
@@ -342,6 +376,49 @@ input[type="submit"]
 		line-height: 2.1875rem
 
 
+.faq
+	&__content
+		margin-bottom: -0.9375rem
+		&-part
+			width: 48.6842105%
+			margin-right: 2.631579%
+			&:last-child
+				margin-right: 0
+	&__item
+		border: 1px solid #626262
+		border-radius: 3px
+		padding: 1rem 1.25rem
+		font-size: 0.75em
+		line-height: 1.5
+		margin-bottom: 0.9375rem
+		&.active
+			.faq__item-question
+				color: $orange
+			.faq__item-answer
+				margin-top: 1rem
+				height: auto
+		&-question
+			font-family: $med
+			transition: 0.3s all ease-in
+			cursor: pointer
+			& > svg
+				width: 0.625rem
+				fill: #dddddd
+			& > span
+				display: block
+				padding-right: 2rem
+		&-answer
+			height: 0
+			overflow: hidden
+			transition: 0.3s all ease-in
+			margin-top: 0
+			p
+				margin-bottom: 0.5rem
+				&:last-of-type
+					margin-bottom: 0
+
+		&:nth-child(2n)
+			margin-right: 0
 
 body 
 	.mm-menu
@@ -356,38 +433,114 @@ body
 	.mm-menu .mm-btn:after, .mm-menu .mm-btn:before
 		border-color: #fff
 
-.header
-	&.header--inner
-		border-bottom: 1px solid #25282e
-	&__breadcrumbs
-		padding: 1.25rem 0
-		li
-			position: relative
-			padding-right: 1.1875rem
-			margin-right: 0.9375rem
-			line-height: 1.5
+.contacts
+	&__info
+		margin-top: 3.75rem
+	&__form
+		width: 39.0350877%
+		text-align: center
+		position: relative
+		z-index: 1
+		border: 1px solid #474747
+		padding: 2.5rem 1.5625rem
+		background-color: #1e2025
+		.modal-btn
+			padding: 0 2rem
+			margin: 5.62500rem auto 0
+		.modal-caption
+			text-transform: uppercase
+			font-size: 0.875em
+			font-family: $semi
+			line-height: 1.71428571
+		input:not([type="submit"]),
+		textarea
+			color: #fff
+		.modal-content
+			margin-top: 2.5rem
+			display: block
+		.form-group.form-group--hover > label
+			color: #dcdcdc
+			background-color: #1e2025
+		.form-group.form-group--hover.active > label
+			color: #dcdcdc
+	&__map
+		min-height: 30.3125rem
+		width: 57.0175439%
+		iframe
+			border: 0
+			display: block
+			width: 100%
+			height: 100%
+	&__top
+		font-size: 0.875em
+		margin-bottom: -2rem
+		margin-right: -2rem
+		&-item
+			margin-right: 2rem
+			margin-bottom: 2rem
+		&-value
+			line-height: 1.71428571
+			& > *
+				color: #fff
+				display: block
+		&-title
+			text-transform: uppercase
+			font-family: $semi
+			margin-bottom: 1rem
 			&:after
 				content: ''
 				display: block
-				position: absolute
-				right: 0
-				top: 50%
-				transform: translateY(-50%)
-				width: 0.25rem
-				height: 0.4375rem
-				background: url(../img/arrow-right.svg) no-repeat center
-				background-size: cover
-			&:last-of-type
-				margin-right: 0
-				padding-right: 0
+				height: 1px
+				margin-top: 0.1875rem
+				width: 1.87500rem
+				background-color: $orange
+
+.header
+	&.header--inner
+		border-bottom: 1px solid #25282e
+	&__category
+		background-position: center
+		background-size: cover
+		background-repeat: no-repeat
+		min-height: 11.87500rem
+		h1
+			color: #1e2025
+			letter-spacing: 0.025em
+			padding: 1.5rem
+			text-align: center
+			text-transform: uppercase
+			font-family: $bold
+			font-size: 1.62500em
+	&__breadcrumbs
+		&-content
+			padding: 1.25rem 0
+			li
+				position: relative
+				padding-right: 1.1875rem
+				margin-right: 0.9375rem
+				line-height: 1.5
 				&:after
-					display: none
-				a
-					color: #7c7c7c
-		a
-			display: block
-			color: #dcdcdc
-			font-size: 0.8125em
+					content: ''
+					display: block
+					position: absolute
+					right: 0
+					top: 50%
+					transform: translateY(-50%)
+					width: 0.25rem
+					height: 0.4375rem
+					background: url(../img/arrow-right.svg) no-repeat center
+					background-size: cover
+				&:last-of-type
+					margin-right: 0
+					padding-right: 0
+					&:after
+						display: none
+					a
+						color: #7c7c7c
+			a
+				display: block
+				color: #dcdcdc
+				font-size: 0.8125em
 	&__mobile
 		display: none
 		background-color: transparent
@@ -668,6 +821,117 @@ body
 
 .inner
 	padding: 1.25rem 0 3.75rem
+	color: #fff
+	&__caption
+		text-transform: uppercase
+		font-family: $semi
+		letter-spacing: 0.025em
+		font-size: 1.12500em
+	&__top
+		margin-top: 1.4rem
+
+
+.catalog
+	&__top
+		height: 3.12500rem
+	&__pagination
+		margin-top: 2.5rem
+		&-list
+			li
+				margin-right: 0.625rem
+				&.active
+					a
+						background-color: $orange
+				a
+					display: block
+					border-radius: 3px
+					width: 1.25rem
+					height: 1.25rem
+					text-align: center
+					line-height: 1.25rem
+					color: #fff
+					font-size: 0.625em
+				&:first-of-type,
+				&:last-of-type
+					display: -webkit-flex
+					display: -moz-flex
+					display: -ms-flex
+					display: -o-flex
+					display: flex
+					align-items: center
+					justify-content: center
+					a
+						background-position: center
+						background-size: cover
+						background-repeat: no-repeat
+						width: 0.875rem
+						height: 0.5625rem
+				&:first-of-type
+					a
+						background-image: url(../img/pagination-left.svg)
+				&:last-of-type
+					margin-right: 0
+					a
+						background-image: url(../img/pagination-right.svg)
+				a
+	&__sort
+		font-size: 0.8125em
+		&-item
+			display: block
+			color: #7c7c7c
+			margin-right: 1.25rem
+			position: relative
+			&:before
+				content: ''
+				display: block
+				position: absolute
+				left: 0
+				top: 50%
+				transform: translateY(-50%)
+				width: 0.4375rem
+				height: 0.625rem
+				background-position: center
+				background-size: cover
+				background-repeat: no-repeat
+			&:last-child
+				margin-right: 0
+			&.catalog__sort-item--active
+				color: #dcdcdc
+				padding-left: 0.75rem
+			&.catalog__sort-item--asc
+				&:before
+					background-image: url(../img/sort-arrow--asc.svg)
+			&.catalog__sort-item--desc
+				&:before
+					background-image: url(../img/sort-arrow--desc.svg)
+		&-title
+			color: #dcdcdc
+			margin-right: 2rem
+			display: block
+	&__items
+		margin-top: 2.5rem
+		margin-bottom: -4.5rem
+	&__right
+		width: 64.9122807%
+		.new__item
+			width: 48.6486486%
+			margin-right: 2.7027028%
+			&:nth-child(2n)
+				margin-right: 0
+	&__filter
+		width: 27.1929825%
+		color: #fff
+		&-top
+			border-bottom: 1px solid #dddddd
+			svg
+				width: 1rem
+				height: 1rem
+				fill: #fff
+				display: none
+			span
+				text-transform: uppercase
+				font-family: $semi
+				font-size: 0.875em
 
 .banner
 	background-color: #1c1c1c
@@ -872,27 +1136,19 @@ body
 .new
 	.caption
 		margin-bottom: 5.3125rem
-	&__item
-		width: 31.5789474%
-		margin-bottom: 4.5rem
+	.new__item
 		margin-right: 2.6315789%
+		width: 31.5789474%
+
+		&:nth-child(3n)
+			margin-right: 0
+	&__item
+		margin-bottom: 4.5rem
 		background-color: #1c1c1c
 		text-align: center
 		padding: 0 1.5625rem
 		position: relative
-		max-width: 360px
-		&:hover
-			.new__item-img img
-				max-width: 85.483871%
-			.new__item-title
-				transform: translateY(-0.3rem)
-				font-size: 0.6875em
-				width: 80%
-			.new__item-btn
-				opacity: 1
-				transform: scale(1) translateX(-50%)
-		&:nth-child(3n)
-			margin-right: 0
+		max-width: 360px		
 		&-btn
 			opacity: 0
 			padding: 0 1.5625rem
@@ -1157,9 +1413,9 @@ body
 				bottom: 0
 				right: 0
 				height: 2.5rem
-				background-image: -moz-linear-gradient( 90deg, rgb(37,40,46) 0%, rgba(37,40,46,0) 100%);
-				background-image: -webkit-linear-gradient( 90deg, rgb(37,40,46) 0%, rgba(37,40,46,0) 100%);
-				background-image: -ms-linear-gradient( 90deg, rgb(37,40,46) 0%, rgba(37,40,46,0) 100%);
+				background-image: -moz-linear-gradient( 90deg, rgb(30,32,37) 0%, rgba(30,32,37,0) 100%);
+				background-image: -webkit-linear-gradient( 90deg, rgb(30,32,37) 0%, rgba(30,32,37,0) 100%);
+				background-image: -ms-linear-gradient( 90deg, rgb(30,32,37) 0%, rgba(30,32,37,0) 100%);
 			b
 				color: #fff
 				font-family: $semi
@@ -1414,9 +1670,20 @@ body
 		margin-right: 4%
 		width: 51%
 
+@media screen and (max-width: 1199px) and (min-width: 991px)
+	.new__item:hover .new__item-title
+		font-size: .58em
+
+
 @media screen and (max-width: 1199px)
 	html
 		font-size: 15px
+	.inner__caption
+		font-size: 1.05em
+	.contacts__top
+		font-size: .8em
+	.header__category h1
+		font-size: 1.5em
 	.product__info-characteristics
 		font-size: .8em
 	.product__info-title
@@ -1452,8 +1719,7 @@ body
 		margin-right: 1.55rem
 	.new__item-title
 		font-size: .65em
-	.new__item:hover .new__item-title
-		font-size: .58em
+	
 	.share__slide-title
 		font-size: 1.45em
 	.share__slide-descr
@@ -1470,9 +1736,38 @@ body
 		font-size: .81em
 	
 
+@media screen and (min-width: 991px)
+	.new__item
+		&:hover
+			.new__item-img img
+				max-width: 85.483871%
+			.new__item-title
+				transform: translateY(-0.3rem)
+				font-size: 0.6875em
+				width: 80%
+			.new__item-btn
+				opacity: 1
+				transform: scale(1) translateX(-50%)
+
 @media screen and (max-width: 991px)
 	html
 		font-size: 14px
+	.inner__caption
+		font-size: 1em
+	.faq__item
+		font-size: .7em
+	.header__category h1
+		font-size: 1.4em
+	.contacts__top
+		font-size: .75em
+	.catalog__filter-top span
+		font-size: .8em
+	.catalog__sort-title
+		margin-right: 1.8rem
+	.catalog__sort-title
+		margin-right: 1rem
+	.catalog__sort
+		font-size: .78em
 	.banner__slide-gallery
 		margin-right: 7%
 		width: 48%
@@ -1522,13 +1817,14 @@ body
 		font-size: .55em
 	.news__item-info p
 		font-size: .75em
-	.new__item
-		width: 40%
-		margin-right: 5%
-		&:nth-child(3n)
+	.new
+		.new__item
+			width: 40%
 			margin-right: 5%
-		&:nth-child(2n)
-			margin-right: 0
+			&:nth-child(3n)
+				margin-right: 5%
+			&:nth-child(2n)
+				margin-right: 0
 	.new__content
 		justify-content: center
 	.new__item:hover .new__item-btn
@@ -1588,6 +1884,46 @@ body
 @media screen and (max-width: 767px)
 	html
 		font-size: 13px
+	.contacts__info
+		flex-direction: column
+		align-items: center
+	.contacts__form
+		width: 60%
+	.inner__caption
+		font-size: .9em
+	.contacts__map
+		width: 100%
+		margin-top: 2.5rem
+		height: 30.3125rem
+	.contacts__top
+		font-size: .7em
+	.header__category h1
+		font-size: 1.3em
+	.faq__item
+		font-size: .65em
+	.catalog__content
+		flex-direction: column
+	.catalog__filter-top 
+		display: -webkit-flex
+		display: -moz-flex
+		display: -ms-flex
+		display: -o-flex
+		display: flex
+		align-items: center
+		cursor: pointer
+		justify-content: flex-start
+		span
+			margin-right: 0.8rem
+		svg
+			display: block
+	.catalog__right 
+		width: 100%
+		margin-top: 2.2rem
+	.catalog__filter
+		width: auto
+	.catalog__top.catalog__filter-top
+		height: auto
+		padding-bottom: 1rem
 	.banner__slide-video
 		bottom: 0.7rem
 	.text-block ul li
@@ -1652,15 +1988,14 @@ body
 		flex: 1
 
 @media screen and (max-width: 720px)
-	.new__item
-		width: 46%
-		margin-right: 4%
-		&:nth-child(3n)
+	.new
+		.new__item
+			width: 46%
 			margin-right: 4%
+			&:nth-child(3n)
+				margin-right: 4%
 	.new__item-title
 		font-size: .58em
-	.new__item:hover .new__item-title
-		font-size: .5em
 
 
 @media screen and (max-width: 650px)
@@ -1683,29 +2018,54 @@ body
 		font-size: .65em
 	.product__gallery
 		width: 60%
+	.shares-page .share__slide
+		width: 48%
+		margin-right: 4%
+		&:nth-child(2n)
+			margin-right: 0
+		&:nth-child(3n)
+			margin-right: 4%
 
 @media screen and (max-width: 620px)
-	.new__item
-		width: 60%
-		margin-right: 0%
-		&:nth-child(3n)
+	.catalog__items
+		justify-content: center
+	.new,
+	.catalog__items
+		.new__item
+			width: 60%
 			margin-right: 0%
+			&:nth-child(3n)
+				margin-right: 0%
 
 
 @media screen and (max-width: 580px)
 	.header__right.active .header__search-form
 		right: 1rem
+	.faq__content
+		flex-direction: column
+	.faq__content-part
+		margin-right: 0
+		width: 100%
 
 
 @media screen and (max-width: 550px)
 	.banner__slide-gallery
 		width: 70%
+	.news-item img
+		width: 70%
+		float: none
+		margin: 0 auto 3.2rem
+		display: block
+	.news-item .product__description
+		margin-top: 2rem
 	.jquery-modal.blocker.current
 		padding: 0
 		.modal
 			width: 97%
-	.new__item
-		width: 75%
+	.new,
+	.catalog__items
+		.new__item
+			width: 75%
 	.footer__content
 		flex-wrap: wrap
 		justify-content: space-around
@@ -1719,6 +2079,8 @@ body
 @media screen and (max-width: 530px)
 	.product__gallery
 		width: 70%
+	.contacts__form
+		width: 70%
 
 @media screen and (max-width: 480px)
 	.advantages__item
@@ -1727,6 +2089,13 @@ body
 			margin-right: 5%
 		&:nth-child(2n)
 			margin-right: 0
+	.catalog__sort.catalog__top
+		margin-bottom: 4.5rem
+		height: auto
+		flex-direction: column
+	.catalog__sort-title
+		margin-right: 0
+		margin-bottom: 0.2rem
 
 @media screen and (max-width: 470px)
 	.share__slider
@@ -1734,10 +2103,31 @@ body
 		margin: 0 auto
 	.news__item-info p
 		font-size: .68em
+	.share-page__content
+		width: 60%
+		margin-left: auto
+		margin-right: auto
+	.shares-page .share__slide
+		width: 100%
+		margin-right: 0%
+		&:nth-child(3n)
+			margin-right: 0
 
 @media screen and (max-width: 450px)
 	.banner__slide-info
 		margin-top: 5rem
+	.inner__caption
+		font-size: .85em
+	.contacts__top
+		font-size: .65em
+	.contacts__form
+		width: 80%
+	.header__category h1
+		font-size: 1.2em
+	.catalog__sort-items
+		flex-wrap: wrap
+		justify-content: flex-start
+		line-height: 1.5em
 	.product__info-btn
 		margin-right: 2rem
 	.text-block ul li
@@ -1782,11 +2172,13 @@ body
 	.footer__content
 		flex-direction: column
 		align-items: center
+	.news-item img
+		width: 100%
 	.header__search
 		margin-right: 0
 	.header__callback, .header__languages
 		margin-right: 0
-	.jquery-modal.blocker.current .modal.callback-modal .form-group
+	.jquery-modal.blocker.current .modal.callback-modal .form-group:not(.form-group--shorter)
 		width: 100%
 	.modal-content
 		flex-direction: column
@@ -1820,11 +2212,17 @@ body
 @media screen and (max-width: 380px)
 	.share__slider
 		width: 80%
+	.share-page__content
+		width: 80%
 	.product__gallery
 		width: 80%
 
 @media screen and (max-width: 360px)
-	.new__item
-		width: 88%
+	.new,
+	.catalog__items
+		.new__item
+			width: 88%
 	.product__gallery
+		width: 100%
+	.contacts__form
 		width: 100%

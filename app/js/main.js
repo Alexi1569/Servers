@@ -2,6 +2,22 @@
 jQuery(document).ready(function($) {
 	var windowWidth = $(window).width();
 
+	setTimeout(function() {
+		$('#mobile-menu').css({
+			'opacity': 1,
+			'height': 'auto',
+			'overflow': 'visible',
+		})
+	}, 1000);
+
+	$(document).click(function(e) {
+		if ((!$(e.target.closest('.header__right')).is('.header__right')) && $('.header__right').hasClass('active')) {
+			$('.header__right').removeClass('active');
+			resetHeaderSearch();
+		}
+
+	})
+
 	function calculateHeaderSearch() {
 		var searchW = $('.header__search').outerWidth(true);
 		var navW = $('.header__nav').outerWidth(true);
@@ -65,6 +81,10 @@ jQuery(document).ready(function($) {
 		resetHeaderSearch();
 	});
 
+	$('.js-question-toggle').click(function() {
+		$(this).closest('.faq__item').toggleClass('active');
+	});
+
 
 	function alignBannerControls() {
 		var gallery = $('.banner__slide-gallery');
@@ -113,12 +133,35 @@ jQuery(document).ready(function($) {
 	$('.form-group--hover').focusout(function(e) {
 		$(this).removeClass('active');
 
-		if ($(this).find('input').val() === '') {
+		if ($(this).find(':input').val() === '') {
 			$(this).removeClass('active-no-label');
 		} else {
 			$(this).addClass('active-no-label');
 		}
 	})
+
+
+	function setNewItemHeight() {
+		if (windowWidth > 991) {
+			$('.new__item').each(function() {
+				var h = $(this).outerHeight();
+
+				$(this).css({
+					'height': h + 'px',
+				});
+				
+			});
+		}
+	}
+
+	if ($('.new__item').length) {
+		setNewItemHeight();
+
+		$(window).resize(function() {
+			setNewItemHeight();
+		})
+	}
+	
 
 	if ($('#banner__slider').length) {
 		var bannerSlider = $('#banner__slider');

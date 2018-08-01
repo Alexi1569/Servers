@@ -765,44 +765,46 @@
       <svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15.642 15.642" xmlns:xlink="http://www.w3.org/1999/xlink"><path d="M8.882,7.821l6.541-6.541c0.293-0.293,0.293-0.768,0-1.061 c-0.293-0.293-0.768-0.293-1.061,0L7.821,6.76L1.28,0.22c-0.293-0.293-0.768-0.293-1.061,0c-0.293,0.293-0.293,0.768,0,1.061 l6.541,6.541L0.22,14.362c-0.293,0.293-0.293,0.768,0,1.061c0.147,0.146,0.338,0.22,0.53,0.22s0.384-0.073,0.53-0.22l6.541-6.541 l6.541,6.541c0.147,0.146,0.338,0.22,0.53,0.22c0.192,0,0.384-0.073,0.53-0.22c0.293-0.293,0.293-0.768,0-1.061L8.882,7.821z"/></svg>
     </a>
     <div class="modal-inner">
-      <label class="modal-caption">обратный звонок</label>
-      <label class="modal-content">
-        <div class="form-group form-group--hover">
-          <label>Имя</label>
-          <input type="text" required />
-        </div>
-        <div class="form-group form-group--hover">
-          <label>Телефон</label>
-          <input type="tel" required />
-        </div>
-        <div class="form-group">
-          <select class="styled-select">
-            <option selected value="Когда" disabled>Когда</option>
-            <option value="Сейчас">Сейчас</option>
-            <option value="Завтра">Завтра</option>
-            <option value="Послезавтра">Послезавтра</option>
-          </select>
-        </div>
-        <div class="form-group flex ai-s jc-sb">
-          <div class="form-group form-group--shorter">
+      <form action="">
+        <label class="modal-caption">обратный звонок</label>
+        <label class="modal-content">
+          <div class="form-group form-group--hover">
+            <label>Имя</label>
+            <input type="text" required />
+          </div>
+          <div class="form-group form-group--hover">
+            <label>Телефон</label>
+            <input type="tel" required />
+          </div>
+          <div class="form-group">
             <select class="styled-select">
-              <option selected value="Часы" disabled>Часы</option>
-              <option value="14">14</option>
-              <option value="15">15</option>
-              <option value="16">16</option>
+              <option selected value="Когда" disabled>Когда</option>
+              <option value="Сейчас">Сейчас</option>
+              <option value="Завтра">Завтра</option>
+              <option value="Послезавтра">Послезавтра</option>
             </select>
           </div>
-          <div class="form-group form-group--shorter">
-            <select class="styled-select">
-              <option selected value="Минуты" disabled>Минуты</option>
-              <option value="20">20</option>
-              <option value="30">30</option>
-              <option value="40">40</option>
-            </select>
+          <div class="form-group flex ai-s jc-sb">
+            <div class="form-group form-group--shorter">
+              <select class="styled-select">
+                <option selected value="Часы" disabled>Часы</option>
+                <option value="14">14</option>
+                <option value="15">15</option>
+                <option value="16">16</option>
+              </select>
+            </div>
+            <div class="form-group form-group--shorter">
+              <select class="styled-select">
+                <option selected value="Минуты" disabled>Минуты</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+              </select>
+            </div>
           </div>
-        </div>
-      </label>
-      <input type="submit" value="Жду звонка" class="btn modal-btn" />
+        </label>
+        <input type="submit" value="Жду звонка" class="btn modal-btn" />
+      </form>
     </div>
   </div>
 
