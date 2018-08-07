@@ -2424,6 +2424,24 @@ body .mm-menu .mm-btn:after, body .mm-menu .mm-btn:before {
   margin-bottom: 0;
 }
 
+.guarantee .text-block ul li {
+  padding-top: 0.9rem;
+  padding-left: 3.62500rem;
+  position: relative;
+}
+
+.guarantee .text-block ul li img {
+  transition: 0.15s all ease-in;
+  width: 2.25rem;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.guarantee .text-block ul li img:hover {
+  transform: scale(1.05);
+}
+
 .guarantee .text-block ul li:before {
   display: none;
 }
@@ -2478,7 +2496,6 @@ body .mm-menu .mm-btn:after, body .mm-menu .mm-btn:before {
   text-transform: uppercase;
   color: #f58220;
   font-family: "Montserrat med";
-  text-decoration: underline;
   font-style: normal;
 }
 
