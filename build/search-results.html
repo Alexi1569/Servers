@@ -7,7 +7,7 @@
   <link rel="stylesheet" type="text/css" href="css/main.min.css">
   <title>Frime</title>
 </head>
-<body>
+<body class="search-results">
 
   <nav id="mobile-menu">
     <ul>
@@ -227,6 +227,16 @@
       </div>
     </header>
 
+    <div class="header__category flex ai-c">
+      <div class="container">
+        <h1>
+          результаты поиска по запросу: 
+          <span>«клавиатура»</span>
+        </h1>
+      </div>
+    </div>
+
+
     <div class="header__breadcrumbs">
       <div class="container">
         <ul class="header__breadcrumbs-content flex fw-w ai-s jc-fs">
@@ -234,48 +244,41 @@
             <a href="#">Главная страница</a>
           </li>
           <li>
-            <a href="#">Контакты</a>
+            <a href="#">Клавиатуры</a>
           </li>
         </ul>
       </div>
     </div>
+    
 
     <section class="inner">
-      <div class="shares-item">
+      <div class="catalog">
         <div class="container">
-          <div class="shares-item__content">
-            <div class="shares-item__img">
-              <div class="share__slide">
-                <div class="share__slide-img">
-                  <img src="img/share/share-1.jpg" alt="alt" />
-                  <div class="share__slide-info js-slide-info">
-                    <h3 class="share__slide-title">акция</h3>
-                    <p class="share__slide-descr">
-                      только 3 дня (с 21.09.2018 - по 24.09.2018)
-                      <b>-30%</b> 
-                      на всю технику 
-                      <i>acer</i>
-                    </p>
-                  </div>
+          <p class="search-results__caption">результаты поиска по запросу: «клавиатура»</p>
+        </div>
+        <div class="container">
+          <div class="catalog__content flex ai-fs jc-sb">
+            <div class="catalog__filter">
+              <div class="catalog__filter-top catalog__top">
+                <div class="search-results__info flex ai-b jc-fs">
+                  <p>Найдено товаров:</p>
+                  <span>13</span>
                 </div>
               </div>
+              <div class="catalog__filter-content">
+                
+              </div>
             </div>
-            <h1 class="shares-item__title">акция: -30% на всю технику acer</h1>
-            <div class="shares-item__description">
-              <p>Не упусти выгодную возможность!</p>
-              <p>Только 3 дня! с 21.09.2018 и по 24.09.2018 покупай акционные товары компании ACER и получай скидку -30% от стоимости покупки.</p>
-            </div>
-            <div class="shares-item__text">
-             <p>Компьютеры и ноутбуки <b>Acer</b>, нацеленные на разных пользователей, не относятся к числу престижных. Но они недорогие (никакой доплаты за красивый бренд!) и отличаются неплохим качеством, что и определило их заслуженную популярность на рынке. В этом вопросе они значительно обошли других известных производителей.</p>
-             <p>Успех Acer прямо противоположен успеху Apple. Никакого престижа, но низкая стоимость при хороших возможностях. Кстати, дизайн этой продукции очень даже неплох. Впрочем, нельзя не упомянуть и про Acer Ferrari – ноутбуки относящиеся к верхнему сегменту — тут вам и привлекательный дизайн и высокая производительность и цена как у Apple. Но все равно — подавляющая часть продукции Acer стоит очень дешево. Сам Стен Ши как-то отметил про своих конкурентов, что они просто не умеют создавать и продавать недорогую технику, а следовательно не выдержат конкуренции. Цель Acer — первое место. И у корпорации есть все шансы его добиться.</p>
-             <p>Компьютеры и ноутбуки <b>Acer</b>, нацеленные на разных пользователей, не относятся к числу престижных. Но они недорогие (никакой доплаты за красивый бренд!) и отличаются неплохим качеством, что и определило их заслуженную популярность на рынке. В этом вопросе они значительно обошли других известных производителей.</p>
-             <p>Успех Acer прямо противоположен успеху Apple. Никакого престижа, но низкая стоимость при хороших возможностях. Кстати, дизайн этой продукции очень даже неплох. Впрочем, нельзя не упомянуть и про Acer Ferrari – ноутбуки относящиеся к верхнему сегменту — тут вам и привлекательный дизайн и высокая производительность и цена как у Apple. Но все равно — подавляющая часть продукции Acer стоит очень дешево. Сам Стен Ши как-то отметил про своих конкурентов, что они просто не умеют создавать и продавать недорогую технику, а следовательно не выдержат конкуренции. Цель Acer — первое место. И у корпорации есть все шансы его добиться.</p>
-            </div>
-          </div>
-          <div class="shares-item__offers new">
-            <h2 class="shares-item__offers-title">товары которые учавствуют в акции</h2>
-            <div class="shares-item__offers-wrapper">
-              <div class="new__content flex ai-s jc-fs fw-w">
+            <div class="catalog__right">
+              <div class="catalog__sort catalog__top flex ai-b jc-fe">
+                <span class="catalog__sort-title">Сортировать:</span>
+                <div class="catalog__sort-items flex ai-s jc-fe">
+                  <a href="#" class="catalog__sort-item">по умолчанию</a>
+                  <a href="#" class="catalog__sort-item catalog__sort-item--active catalog__sort-item--asc">по популярности</a>
+                  <a href="#" class="catalog__sort-item">по названию</a>
+                </div>
+              </div>
+              <div class="catalog__items flex ai-s jc-fs fw-w">
                 <div class="new__item">
                   <a href="#" class="new__item-img">
                     <img src="img/new/new-1.jpg" alt="Alt" />
@@ -283,65 +286,91 @@
                   <a href="#" class="new__item-title flex ai-c jc-c">
                     <span>Клавиатура Frime FKBS-001</span>
                   </a>
-                  <a href="#" class="btn btn--smaller new__item-btn">смотреть</a>
+                  <a href="#" class="btn btn--smaller new__item-btn">
+                    <span class="btnflip-item btnflip__front">Смотреть</span>
+                    <span class="btnflip-item btnflip__center"></span>
+                    <span class="btnflip-item btnflip__back">Смотреть</span>
+                  </a>
                 </div>
                 <div class="new__item">
                   <a href="#" class="new__item-img">
                     <img src="img/new/new-1.jpg" alt="Alt" />
                   </a>
                   <a href="#" class="new__item-title flex ai-c jc-c">
-                    <span>Мышка Razer Abyssus V2</span>
+                    <span>Клавиатура Frime FKBS-001</span>
                   </a>
-                  <a href="#" class="btn btn--smaller new__item-btn">смотреть</a>
+                  <a href="#" class="btn btn--smaller new__item-btn">
+                    <span class="btnflip-item btnflip__front">Смотреть</span>
+                    <span class="btnflip-item btnflip__center"></span>
+                    <span class="btnflip-item btnflip__back">Смотреть</span>
+                  </a>
                 </div>
                 <div class="new__item">
                   <a href="#" class="new__item-img">
                     <img src="img/new/new-1.jpg" alt="Alt" />
                   </a>
                   <a href="#" class="new__item-title flex ai-c jc-c">
-                    <span>Наушники VOID PRO RGB Wireless Premium Gaming Headset — Carbon</span>
+                    <span>Клавиатура Frime FKBS-001</span>
                   </a>
-                  <a href="#" class="btn btn--smaller new__item-btn">смотреть</a>
+                  <a href="#" class="btn btn--smaller new__item-btn">
+                    <span class="btnflip-item btnflip__front">Смотреть</span>
+                    <span class="btnflip-item btnflip__center"></span>
+                    <span class="btnflip-item btnflip__back">Смотреть</span>
+                  </a>
                 </div>
                 <div class="new__item">
                   <a href="#" class="new__item-img">
                     <img src="img/new/new-1.jpg" alt="Alt" />
                   </a>
                   <a href="#" class="new__item-title flex ai-c jc-c">
-                    <span>Оперативная память Vengeance Series 32GB (4 x 8GB) DDR4 SODIMM 4000MHz CL19</span>
+                    <span>Клавиатура Frime FKBS-001</span>
                   </a>
-                  <a href="#" class="btn btn--smaller new__item-btn">смотреть</a>
+                  <a href="#" class="btn btn--smaller new__item-btn">
+                    <span class="btnflip-item btnflip__front">Смотреть</span>
+                    <span class="btnflip-item btnflip__center"></span>
+                    <span class="btnflip-item btnflip__back">Смотреть</span>
+                  </a>
                 </div>
-                <div class="new__item">
-                  <a href="#" class="new__item-img">
-                    <img src="img/new/new-1.jpg" alt="Alt" />
-                  </a>
-                  <a href="#" class="new__item-title flex ai-c jc-c">
-                    <span>Системный блок Carbide series spec-omega RGB mid-tower tempered Glass gaming case — BLACK</span>
-                  </a>
-                  <a href="#" class="btn btn--smaller new__item-btn">смотреть</a>
-                </div>
-                <div class="new__item">
-                  <a href="#" class="new__item-img">
-                    <img src="img/new/new-1.jpg" alt="Alt" />
-                  </a>
-                  <a href="#" class="new__item-title flex ai-c jc-c">
-                    <span>Кулер Hydro Series H115i PRO RGB 280mm Liquid CPU Cooler</span>
-                  </a>
-                  <a href="#" class="btn btn--smaller new__item-btn">смотреть</a>
-                </div>
+                
               </div>
-              <a href="#" class="btn btn--linear btn--higher shares-item__offers-btn shares-item__offers-btn">
-                <span class="btnflip-item btnflip__front">посмотреть все</span>
-                <span class="btnflip-item btnflip__center"></span>
-                <span class="btnflip-item btnflip__back">посмотреть все</span>
-              </a>
+              <div class="catalog__pagination">
+                <ul class="catalog__pagination-list flex ai-s jc-c">
+                  <li>
+                    <a href=""></a>
+                  </li>
+                  <li>
+                    <a href="#">1</a>
+                  </li>
+                  <li>
+                    <a href="#">...</a>
+                  </li>
+                  <li>
+                    <a href="#">5</a>
+                  </li>
+                  <li class="active">
+                    <a href="#">6</a>
+                  </li>
+                  <li>
+                    <a href="#">7</a>
+                  </li>
+                  <li>
+                    <a href="#">...</a>
+                  </li>
+                  <li>
+                    <a href="#">11</a>
+                  </li>
+                  <li>
+                    <a href=""></a>
+                  </li>
+                </ul>
+              </div>
             </div>
-            
           </div>
         </div>
       </div>
     </section>
+    
+
     
 
     <footer class="footer">

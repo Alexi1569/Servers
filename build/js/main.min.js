@@ -2,6 +2,20 @@
 jQuery(document).ready(function($) {
 	var windowWidth = $(window).width();
 
+	function alignFooter() {
+		var h = $('.footer').outerHeight();
+
+		$('#page').css({
+			'padding-bottom': h + 'px',
+		});
+	}
+
+	alignFooter();
+
+	$(window).resize(function() {
+		alignFooter();
+	})
+
 	setTimeout(function() {
 		$('#mobile-menu').css({
 			'opacity': 1,
@@ -118,8 +132,8 @@ jQuery(document).ready(function($) {
 		windowWidth = $(window).width();
 	});
 
-	$('.form-group--hover').focusin(function(e) {
-		$(this).addClass('active');
+	$('.form-group--hover :input').focusin(function(e) {
+		$(this).closest('.form-group').addClass('active');
 	})
 
 	if ($('.styled-select').length) {
