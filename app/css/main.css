@@ -1378,6 +1378,10 @@ body .mm-menu .mm-btn:after, body .mm-menu .mm-btn:before {
   padding-bottom: 1rem;
 }
 
+.header__nav-list > li:nth-child(4), .header__nav-list > li:nth-child(5) {
+  padding-right: 0;
+}
+
 .header__nav-list > li:after {
   content: '';
   display: block;
