@@ -159,10 +159,13 @@ jQuery(document).ready(function($) {
 		if (windowWidth > 991) {
 			$('.new__item').each(function() {
 				var h = $(this).outerHeight();
+				var that = $(this);
 
-				$(this).css({
-					'height': h + 'px',
-				});
+				setTimeout(function() {
+					$(that).css({
+						'height': h + 'px',
+					});
+				}, 500);
 				
 			});
 		}

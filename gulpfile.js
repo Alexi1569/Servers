@@ -1,4 +1,4 @@
-var gulp         = require('gulp'),
+﻿var gulp         = require('gulp'),
 	sass         = require('gulp-sass'),
 	autoprefixer = require('gulp-autoprefixer'),
 	browserSync  = require('browser-sync').create(),
@@ -75,8 +75,13 @@ gulp.task('clear', function() {
 
 gulp.task('js-optimize', function() {
 	return gulp.src([
-		'app/js/**/*.js',
-		'app/libs/**/*.js'
+		'app/libs/jquery.imgzoom.js',
+		'app/libs/jquery.mmenu.all.js',
+		'app/libs/jquery.modal.min.js',
+		'app/libs/jquery.sumoselect.min.js',
+		'app/libs/slick.min.js',
+		'app/js/main.js',
+
 	])
 		.pipe(concat('main.min.js'))
 		.pipe(gulp.dest('build/js'))
