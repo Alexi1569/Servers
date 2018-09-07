@@ -138,10 +138,16 @@ jQuery(document).ready(function($) {
 
 	if ($('.styled-select').length) {
 		$('.styled-select').each(function() {
-			$(this).SumoSelect({
-				floatWidth: 250,
-			})
-		});
+        $(this).selectmenu({
+        	appendTo: '.modal-content',
+          position: {
+              of: $(this).closest('.form-group'),
+              collision: 'flipfit',
+              my: 'left-50% top+10',
+              at: 'center top+40',
+          }
+        });
+    });
 	}
 
 	$('.form-group--hover').focusout(function(e) {
