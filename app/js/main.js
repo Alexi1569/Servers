@@ -2,6 +2,12 @@
 jQuery(document).ready(function($) {
 	var windowWidth = $(window).width();
 
+	if ("ontouchstart" in document.documentElement) {
+	    $('body').addClass('touch-device');
+	} else {
+	    $('body').removeClass('touch-device');
+	}
+
 	function alignFooter() {
 		var h = $('.footer').outerHeight();
 
@@ -51,7 +57,7 @@ jQuery(document).ready(function($) {
 			$('.header__search-form').css({
 				'width': (result - searchIcon - searchClose) + 'px',
 			});
-		} else if (windowWidth > 580) {
+		} else if (windowWidth > 650) {
 			var mobileHamburger = $('.header__mobile').outerWidth(true);
 			var headerLanguages = $('.header__languages').outerWidth(true);
 			var headerSocials = $('.header__socials').outerWidth(true);
@@ -162,7 +168,7 @@ jQuery(document).ready(function($) {
 
 
 	function setNewItemHeight() {
-		if (windowWidth > 991) {
+		if (!($('body').hasClass('touch-device'))) {
 			$('.new__item').each(function() {
 				var h = $(this).outerHeight();
 				var that = $(this);
