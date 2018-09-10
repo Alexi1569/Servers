@@ -15,6 +15,9 @@ $orange: #f58220
 a
 	text-decoration: none
 
+*:focus
+	outline: 0
+
 body .ui-selectmenu-button.ui-button
 	border: 1px solid #dddddd
 	-webkit-border-radius: 3px
@@ -36,6 +39,14 @@ body .ui-selectmenu-button.ui-button
 	display: flex
 	align-items: center
 	justify-content: flex-start
+
+body .ui-selectmenu-button.ui-button:focus
+	outline: 0
+	border-color: #4e4a5b
+
+body .ui-menu .ui-state-focus, body .ui-menu .ui-state-active 
+	margin: 0
+	color: $orange
 
 body .ui-selectmenu-menu
 	background-color: #fff
@@ -2407,31 +2418,16 @@ body
 @media screen and (max-width: 880px)
 	html
 		font-size: 13px
-	.banner__slide-caption
-		font-size: .9em
-	.banner__slide-description
-		font-size: .75em
-	.banner__slide-author
-		font-size: .79em
 	.banner__slide-btn
 		margin-top: 2rem
-	.header__nav-list > li > a
-		font-size: .58em
-	.header__nav-list > li
-		margin-right: 0.7rem
 	.header__nav
-		margin-right: 1rem
-	.header__callback
-		padding: 0 0.8rem
-	.header__callback,
-	.header__languages
-		margin-right: 0.5rem
-	.header__languages a
-		font-size: .55em
-	.header__logo svg
-		width: 4.4rem
-	.header__callback
-		font-size: .45em
+		display: none
+	.header__mobile
+		display: block
+	.header__logo
+		margin-right: 2rem
+	.header__right
+		flex: 1
 
 @media screen and (max-width: 850px)
 	.share__slide-title
@@ -2545,32 +2541,19 @@ body
 		font-size: .68em
 	.banner__slide-author
 		font-size: .7em
-	.news__item-info p
-		font-size: .75em
-	.news__item-info p
-		font-size: .7em
 	.advantages__item
 		width: 30%
 		margin-right: 5%
 		margin-bottom: 1.8rem
 		&:nth-child(3n)
 			margin-right: 0
-	.header__nav
-		display: none
 	.advantages__content
 		flex-wrap: wrap
 		justify-content: center
 		margin-bottom: -1.8rem
-	.seo
-		font-size: .7em
 	.footer
 		font-size: .73em
-	.header__mobile
-		display: block
-	.header__logo
-		margin-right: 2rem
-	.header__right
-		flex: 1
+	
 
 @media screen and (max-width: 720px)
 	.new
@@ -2579,8 +2562,6 @@ body
 			margin-right: 4%
 			&:nth-child(3n)
 				margin-right: 4%
-	.new__item-title
-		font-size: .58em
 
 
 @media screen and (max-width: 650px)
@@ -2795,8 +2776,6 @@ body
 		width: 87%
 	.banner__arrows .arrow--next
 		transform: translateX(200%)
-	.seo
-		font-size: .6em
 	.text-block p
 		font-size: .65em
 
@@ -2805,6 +2784,8 @@ body
 	.footer__content
 		flex-direction: column
 		align-items: center
+	.header__logo svg
+		width: 6.2rem
 	.news-item img
 		width: 100%
 	.header__search
