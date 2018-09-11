@@ -302,11 +302,14 @@ body .mfilter-col-input input[type="radio"]:checked + label:after {
   opacity: 1;
 }
 
+body .mfilter-content .mfilter-content-opts {
+  margin-top: 16px;
+}
+
 body .mfilter-content .mfilter-heading-text span {
   font-family: "Montserrat semi";
   font-size: 14px;
   text-transform: uppercase;
-  margin-bottom: 16px;
   display: block;
 }
 
@@ -1923,10 +1926,10 @@ body .mm-menu .mm-btn:after, body .mm-menu .mm-btn:before {
   left: 0;
   top: 50%;
   transform: translateY(-50%);
-  width: 0.4375rem;
-  height: 0.625rem;
+  width: 9px;
+  height: 11px;
   background-position: center;
-  background-size: cover;
+  background-size: contain;
   background-repeat: no-repeat;
 }
 
@@ -1936,7 +1939,7 @@ body .mm-menu .mm-btn:after, body .mm-menu .mm-btn:before {
 
 .catalog__sort-item.catalog__sort-item--active {
   color: #dcdcdc;
-  padding-left: 0.75rem;
+  padding-left: 12px;
 }
 
 .catalog__sort-item.catalog__sort-item--asc:before {
@@ -2204,6 +2207,10 @@ body .mm-menu .mm-btn:after, body .mm-menu .mm-btn:before {
 
 .category__content {
   position: relative;
+}
+
+.category__content .slick-list .slick-track {
+  margin-left: auto;
 }
 
 .category__slide-inner {

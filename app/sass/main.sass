@@ -253,11 +253,12 @@ body .mfilter-col-input
 	      opacity: 1
 
 body .mfilter-content 
+	.mfilter-content-opts
+		margin-top: 16px
 	.mfilter-heading-text span
 		font-family: $semi
 		font-size: 14px
 		text-transform: uppercase
-		margin-bottom: 16px
 		display: block
 	li
 		padding: 22px 0
@@ -1445,16 +1446,16 @@ body
 				left: 0
 				top: 50%
 				transform: translateY(-50%)
-				width: 0.4375rem
-				height: 0.625rem
+				width: 9px
+				height: 11px
 				background-position: center
-				background-size: cover
+				background-size: contain
 				background-repeat: no-repeat
 			&:last-child
 				margin-right: 0
 			&.catalog__sort-item--active
 				color: #dcdcdc
-				padding-left: 0.75rem
+				padding-left: 12px
 			&.catalog__sort-item--asc
 				&:before
 					background-image: url(../image/sort-arrow--asc.svg)
@@ -1640,6 +1641,8 @@ body
 				right: 0
 	&__content
 		position: relative
+		.slick-list .slick-track
+			margin-left: auto
 	&__slide
 		&-inner
 			min-height: 13.75rem
